@@ -1,0 +1,23 @@
+{
+  "name": "artillery-engine-posthog",
+  "version": "0.0.1",
+  "description": "Load test PostHog with Artillery",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "keywords": [
+    "posthog",
+    "load"
+  ],
+  "author": "Artillery <team@artillery.io>",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "tape": "^5.6.1"
+  },
+  "dependencies": {
+    "async": "^3.2.4",
+    "debug": "^4.3.4",
+    "posthog-node": "^2.2.3"
+  }
+}

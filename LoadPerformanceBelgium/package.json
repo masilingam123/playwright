@@ -1,0 +1,19 @@
+{
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint  --continue",
+    "lint-fix": "turbo run lint-fix  --continue"
+  },
+  "devDependencies": {
+    "turbo": "^1.6.3"
+  },
+  "dependencies": {
+    "artillery": "^2.0.0-31",
+    "playwright": "^1.32.1",
+    "artillery-engine-playwright": "^0.2.1"
+  }
+}

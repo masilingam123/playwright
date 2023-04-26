@@ -1,0 +1,21 @@
+{
+  "config": {
+    "target": "http://127.0.0.1:3003",
+    "phases": [
+      {
+        "duration": 2,
+        "arrivalRate": 500,
+        "rampTo": 1000,
+        "maxVusers": 1
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {"think": "2"},
+        {"get": {"url": "/pets"}}
+      ]
+    }
+  ]
+}

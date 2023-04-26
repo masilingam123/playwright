@@ -1,0 +1,32 @@
+config:
+  target: "https://app.posthog.com"
+  posthog:
+    apiKey: "{{ $processEnvironment.POSTHOG_API_KEY }}"
+  phases:
+    - arrivalRate: 1
+      duration: 2
+  engines:
+    posthog: {}
+scenarios:
+  - name: "posthog engine test"
+    engine: posthog
+    flow:
+      - count: 3
+        loop:
+        - capture:
+            distinctId: "distinct id"
+            event: "movie played"
+            properties:
+              movieId: "Die Hard"
+              category: "Christmas"
+              $set:
+                userProperty: 'value'
+        - identify:
+            distinctId: "distinct id"
+            properties:
+              email: "john@mcclane.com"
+              bareFoot: true
+        - alias:
+            distinctId: "distinct id"
+            alias: "Cowboy"
+        - think: 2

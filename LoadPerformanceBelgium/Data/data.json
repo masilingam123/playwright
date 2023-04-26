@@ -1,0 +1,11 @@
+{
+    "Target": {
+        "URL" : "https://demoqa.com/"
+    },
+    "TextBox" : {
+        "FullName" : "John Doe",
+        "Email" : "John.Doe@example.com",
+        "CurrentAddress" : "PAC, Porto",
+        "PermanentAddress" : "VW, Germany"
+    }
+}

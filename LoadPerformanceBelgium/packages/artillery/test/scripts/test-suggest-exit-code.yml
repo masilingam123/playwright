@@ -1,0 +1,11 @@
+config:
+  processor: ./test-suggest-exit-code.js
+  target: http://asciiart.artillery.io:8080
+  phases:
+    - arrivalCount: 1
+      duration: 1
+scenarios:
+  - flow:
+      - get:
+          url: "/"
+          afterResponse: setNonZeroCode

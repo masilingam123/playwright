@@ -1,0 +1,25 @@
+config:
+  target: "https://demoqa.com/"
+  example:
+    mandatoryString: "a configuration setting for our engine"
+  phases:
+    - duration: 120
+      arrivalCount: 10
+      name: "Warm-Up"  
+    # - duration: 30
+    #  arrivalCount: 15
+    #  name: "Ramp-Up"
+    #- duration: 90
+    #  arrivalCount: 30
+    #  name: "Sustain Load"
+  engines:
+    playwright:
+      launchOptions: 
+       headless: false
+           
+  processor: ../Flows/Scenario2.spec.js
+scenarios:
+  - name: "Dev account signup"
+    engine: playwright
+    flowFunction: "Scenario2"
+    flow: []
